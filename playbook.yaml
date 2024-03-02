@@ -3,5 +3,6 @@
   become_method: sudo
   tasks:
     - package: "name=httpd state=present"
+    - copy: "src=/root/index.html dest=/var/www/html"
     - service: "name=httpd state=started"
 
